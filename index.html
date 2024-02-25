@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator</title>
+    <style>
+        body{
+            background-color: rgba(0, 160, 46, 0.997);
+        }
+        .calculator {
+            text-align: center;
+        }
+        #result {
+            font-size: 30px;
+            font-weight: bold;
+            color: hsl(0, 100%, 39%);
+        }
+        .calculateLove{
+            text-align: center;
+            justify-content: center;
+        }
+        .calculateLove:hover{
+            background-color: green;
+            transition: .2s;
+            font-size: 18px;
+            
+        }
+        footer{
+            text-align: center;
+            background-color: rgb(104, 123, 107);
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Love Calculator</h1>
+        <label for="yourname">Your Name:</label>
+        <input type="text" id="yourname" placeholder="Enter your name">
+        <h1 style="font-family: cursive; color: rgb(31, 2, 2);">&hearts;Love 💖 &hearts;</h1>
+        <label for="partners_name">Partner's Name:</label>
+        <input type="text" id="partners_name" placeholder="Partner's Name">
+        <br><br>
+        <div>
+        <button class="calculateLove" onclick="calculateLove()">Calculate Love</button></div>
+        <div id="result"></div>
+    </div>
+    <footer><p>Devlop by Samir khan</p></footer>
+    
+    <script>
+        function calculateLove() {
+            var yourName = document.getElementById("yourname").value;
+            var partnersName = document.getElementById("partners_name").value;
+            var lovePercentage = Math.floor(Math.random() * 101); // Random percentage between 0 and 100
+            var resultElement = document.getElementById("result");
+
+            resultElement.innerHTML = `${yourName} and ${partnersName} have a love  💖 percentage of ${lovePercentage}%`;
+        }
+    </script>
+</body>
+</html>
